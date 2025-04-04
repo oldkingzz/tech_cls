@@ -1,0 +1,15 @@
+已设置随机种子: 42
+TensorBoard日志保存在: /root/tf-logs/ClassificationMoE
+Traceback (most recent call last):
+  File "/root/YOTO/main_ClassificationMoE.py", line 108, in <module>
+    data_module.setup()
+  File "/root/YOTO/data_provider/unified_dataset.py", line 392, in setup
+    self.xjtu_dataset = XJTUDataset(
+                        ^^^^^^^^^^^^
+  File "/root/YOTO/data_provider/unified_dataset.py", line 122, in __init__
+    self.samples = self._load_samples()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/root/YOTO/data_provider/unified_dataset.py", line 126, in _load_samples
+    bearing_dirs = [d for d in os.listdir(self.data_dir) if os.path.isdir(os.path.join(self.data_dir, d))]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/XJTU-SY'
